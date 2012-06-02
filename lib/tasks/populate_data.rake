@@ -13,8 +13,8 @@ namespace :db do
   end
 
   desc "Fill database with sample data"
-  task populate: :environment do
-    CSV.foreach("/Users/tvu/science.csv") do |row|
+  task :populate, [:path] => [:environment] do |t, args|
+    CSV.foreach(args[:path]) do |row|
       subject, grade, section, subsection, subsection2, description = row[0], row[1], row[2], row[3], row[4], row[5]
       unless sub_obj = Subject.find_by_name(subject)
         sub_obj = Subject.new
