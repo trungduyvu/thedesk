@@ -57,4 +57,5 @@ Thedesk::Application.routes.draw do
   # match ':controller(/:action(/:id))(.:format)'
 
   resources :grades, :only => :index
+  resources :subjects, :only => :index
 end
