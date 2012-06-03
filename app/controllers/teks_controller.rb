@@ -4,8 +4,8 @@ class TeksController < ApplicationController
     query = params[:search]
     teks = Search.search({description: query, keywords: query}, false).map {|s| s.teks }
     teks.delete_if do |t|
-      if  params[:grade]
-        t.grade.id != params[:grade]
+      if params[:grade]
+        not t.grade.id == params[:grade].to_i
       else
         false
       end
@@ -13,13 +13,13 @@ class TeksController < ApplicationController
 
     teks.delete_if do |t|
       if  params[:subject]
-        t.subject.id != params[:subject]
+        t.subject.id != params[:subject].to_i
       else
         false
       end
     end
 
-		render json:  teks
+		render json: teks
   end
 
 
