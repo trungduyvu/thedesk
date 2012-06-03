@@ -1,5 +1,5 @@
 class Search < ActiveRecord::Base
-  attr_accessible :description, :keywords
+  attr_accessible :searchable_text, :grade, :subject
 
   belongs_to :teks
 end
