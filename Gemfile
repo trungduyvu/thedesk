@@ -9,6 +9,7 @@ group :development do
   gem 'sqlite3'
 end
 
+gem 'texticle', "2.0", :require => 'texticle/rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
