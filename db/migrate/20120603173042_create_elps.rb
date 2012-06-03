@@ -1,5 +1,5 @@
 class CreateElps < ActiveRecord::Migration
-  def change
+  def up
     create_table :elps do |t|
       t.text :description
       t.string :section
@@ -8,5 +8,8 @@ class CreateElps < ActiveRecord::Migration
 
       t.timestamps
     end
+  end
+  def down
+  	drop_table :elps
   end
 end
