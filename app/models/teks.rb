@@ -6,4 +6,6 @@ class Teks < ActiveRecord::Base
   has_many :keywords
 
   belongs_to :grade
+
+  has_one :search
 end
