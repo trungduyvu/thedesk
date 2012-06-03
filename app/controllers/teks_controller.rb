@@ -13,7 +13,7 @@ class TeksController < ApplicationController
 
     teks.delete_if do |t|
       if  params[:subject]
-        t.subject.id != params[:subject].to_i
+        not t.subject.id == params[:subject].to_i
       else
         false
       end
