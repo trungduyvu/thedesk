@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120603152114) do
+ActiveRecord::Schema.define(:version => 20120603173042) do
+
+  create_table "elps", :force => true do |t|
+    t.text     "description"
+    t.string   "section"
+    t.string   "subsection"
+    t.text     "formatstring"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
 
   create_table "grades", :force => true do |t|
     t.string   "name"

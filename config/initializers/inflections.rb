@@ -2,6 +2,7 @@
 
 ActiveSupport::Inflector.inflections do |inflect|
   inflect.uncountable %w(teks)
+  inflect.uncountable %w(elps)
 end
 # Add new inflection rules using the following format
 # (all these examples are active by default):
