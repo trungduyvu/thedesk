@@ -10,8 +10,8 @@ class CreateSearches < ActiveRecord::Migration
 
     if Rails.env.production?
       execute <<-SQL
-        create index on Searches using gin(to_tsvector('english', description));
-        create index on Searches using gin(to_tsvector('english', keywords));
+        create index searches_description on Searches using gin(to_tsvector('english', description));
+        create index searches_keywords on Searches using gin(to_tsvector('english', keywords));
       SQL
     end
 
