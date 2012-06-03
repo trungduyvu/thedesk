@@ -61,4 +61,5 @@ Thedesk::Application.routes.draw do
   resources :subjects, only: :index
   resources :teks, only: :index
   resources :keywords, only: :create
+  resources :elps
 end
