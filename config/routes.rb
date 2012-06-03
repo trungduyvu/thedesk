@@ -59,7 +59,7 @@ Thedesk::Application.routes.draw do
 
   resources :grades, only: :index
   resources :subjects, only: :index
-  resources :teks, only: :index
+  resources :teks, only: [:index, :show]
   resources :keywords, only: :create
   resources :elps
 end
