@@ -2,7 +2,7 @@
 class TeksController < ApplicationController
 	def index
     query = params[:search]
-    teks = Search.search({description: query, keywords: query}, false)
+    teks = Search.search({description: query, keywords: query}, false).map {|s| s.teks }
     teks.delete_if do |t|
       if  params[:grade]
         t.grade.id != params[:grade]
