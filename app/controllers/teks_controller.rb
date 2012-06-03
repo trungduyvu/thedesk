@@ -12,4 +12,7 @@ class TeksController < ApplicationController
 
     render json: Search.search(query_map).map {|s| s.teks }
   end
+  def show
+    render json: Teks.find(params[:id])
+  end
 end
