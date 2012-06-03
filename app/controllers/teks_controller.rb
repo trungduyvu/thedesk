@@ -5,7 +5,7 @@ class TeksController < ApplicationController
     if params[:grade] and g = Grade.find(params[:grade].to_i)
       query_map[:grade] = g.name
     end
-    if params[:subject] and s = Grade.find(params[:subject].to_i)
+    if params[:subject] and s = Subject.find(params[:subject].to_i)
       query_map[:subject] = s.name
     end
     query_map[:searchable_text] = params[:search] if params[:search]
