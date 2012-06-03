@@ -8,7 +8,7 @@ class TeksController < ApplicationController
     if params[:subject] and s = Subject.find(params[:subject].to_i)
       query_map[:subject] = s.name
     end
-    query_map[:searchable_text] = params[:search] if params[:search]
+    query_map[:searchable_text] = params[:search].split(' ').join('|') if params[:search]
 
     render json: Search.search(query_map).map {|s| s.teks }
   end
