@@ -11,9 +11,9 @@ class CreateSearches < ActiveRecord::Migration
 
     if Rails.env.production?
       execute <<-SQL
-        create index searches_description on Searches using gin(to_tsvector('english', searchable_text));
-        create index searches_keywords on Searches using gin(to_tsvector('english', subject));
-        create index searches_keywords on Searches using gin(to_tsvector('english', grade));
+        create index searches_teks on Searches using gin(to_tsvector('english', searchable_text));
+        create index searches_subject on Searches using gin(to_tsvector('english', subject));
+        create index searches_grade on Searches using gin(to_tsvector('english', grade));
       SQL
     end
 
@@ -26,6 +26,9 @@ class CreateSearches < ActiveRecord::Migration
        end
   end
   def down
+    drop_index searches_teks
+    drop_index searches_subject
+    drop_index searches_grade
     drop_table :searches
   end
 end
