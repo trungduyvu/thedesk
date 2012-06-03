@@ -2,7 +2,7 @@ TheDesk by Four Teachers
 ========================
 
 A Project by Four Teachers and Random Hacks of Kindness
-
+Hosted on Heroku: [http://fourteachers-thedesk.herokuapp.com/](http://fourteachers-thedesk.herokuapp.com/)
 
 TheDesk API Endpoints for Texas Essential Knowledge and Skills Criteria
 -----------------------------------------------------------------------
