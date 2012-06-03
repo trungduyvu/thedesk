@@ -56,6 +56,7 @@ Thedesk::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
 
-  resources :grades, :only => :index
-  resources :subjects, :only => :index
+  resources :grades, only: :index
+  resources :subjects, only: :index
+  resources :teks, only: :index
 end
