@@ -14,4 +14,5 @@ TheDesk API Endpoints for Texas Essential Knowledge and Skills Criteria
 *  /teks?grade=*grade_id*
 *  /teks?subject=*subject_id*
 *  /teks?grade=*grade_id*&subject=*subject_id*
+*  POST: /keywords?teks=*teks_id*&keyword=*new_keyword*
 

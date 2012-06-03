@@ -1,4 +1,5 @@
 Thedesk::Application.routes.draw do
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -59,4 +60,5 @@ Thedesk::Application.routes.draw do
   resources :grades, only: :index
   resources :subjects, only: :index
   resources :teks, only: :index
+  resources :keywords, only: :create
 end
